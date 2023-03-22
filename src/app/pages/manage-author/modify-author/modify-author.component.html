@@ -1,0 +1,71 @@
+<main id="main" class="main">
+    <div class="pagetitle">
+      <h1>Shop</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a routerLink="/dashboard">Dashboard</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a routerLink="/manage-author">Manage Author</a>
+          </li>
+          <li class="breadcrumb-item active">Add Author</li>
+        </ol>
+      </nav>
+    </div>
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-body row">
+              <h5 class="card-title">Add Author</h5>
+              <div class="col-lg-8">
+              <form action="" [formGroup]="formAddAuthor" *ngIf="formAddAuthor" (ngSubmit)="addAuthor()">
+                <div class="form-group mb-4">
+                    <input [innerMsg]="msgForm" type="text"
+                      [formControlName]="controlNames.nameAuthor"
+                      class="form-control"
+                      placeholder="Name Author"
+                      
+                      autofocus
+                      required
+                    />
+                  </div>
+                  <div class="form-group mb-4">
+                    <input
+                      [innerMsg]="msgForm" 
+                      type="text"
+                      [formControlName]="controlNames.imgAuthor"
+                      placeholder="Link Image Author"
+                      class="form-control"
+                      (change)="getLinkImgAuthor($event)"
+                      required
+                    />
+                  </div>
+                  <div class="form-group mb-4">
+                    <input
+                      [innerMsg]="msgForm" 
+                      type="text"
+                      [formControlName]="controlNames.detailAuthor"
+                      placeholder="Information Author"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+                 
+              </form>
+              </div>
+              <div class="col-lg-4 ">
+                    <img class="img-author" src={{getImgAuthor}} alt="">
+              </div>
+            </div>
+            <div class="add-cancel">
+                <button type="submit" (click)="addAuthor()" class="btn btn-primary">Add Author</button>  
+                <button class="btn btn-danger">Cancel</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  

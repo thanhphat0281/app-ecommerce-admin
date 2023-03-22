@@ -1,0 +1,87 @@
+
+table {
+    tbody {
+        tr {
+            .name-book, .price-book, .quantity-book, .event-book, .num {
+                padding: 4% 0;
+            }
+        }
+    }
+}
+.btn-add {
+    color: white;
+}
+@media only screen and (min-width:1200px) {
+    .image-book {
+        width: 20%;
+        .imgBook {
+           width: 50%;
+        }
+    }
+    .name-book, .price-book, .quantity-book , th{
+        font-size: 16px;
+    }
+}
+@media only screen and (min-width:992px) and (max-width:1199px) {
+    .image-book {
+        width: 20%;
+        .imgBook {
+           width: 50%;
+        }
+    } 
+    .name-book, .price-book, .quantity-book , th{
+        font-size: 16px;
+    }
+}
+@media only screen and (min-width:768px) and (max-width:992px) {
+    .image-book {
+        width: 20%;
+        .imgBook {
+           width: 50%;
+        }
+    } 
+    .name-book, .price-book, .quantity-book , th{
+        font-size: 16px;
+    }
+}
+@media only screen and (min-width:576px) and (max-width:767px) {
+    .image-book {
+        width: 20%;
+        .imgBook {
+           width: 80%;
+        }
+    } 
+}
+@media only screen and (max-width:767px) {
+    .image-book {
+        width: 20%;
+        .imgBook {
+           width: 80%;
+        }
+    }
+}
+
+@media only screen and (min-width:480px) and (max-width:767px) {
+    .image-book {
+        width: 20%;
+        .imgBook {
+           width: 80%;
+        }
+    }
+    .name-book, .price-book, .quantity-book , th{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    .image-book {
+        width: 20%;
+        .imgBook {
+           width: 100%;
+        }
+    }
+    .name-book, .price-book, .quantity-book , th{
+        font-size: 12px;
+    }
+   
+}

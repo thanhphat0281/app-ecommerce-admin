@@ -1,0 +1,42 @@
+<section class="section">
+    <div class="row">
+       <div class="col-lg-12">
+          <div class="card">
+             <div class="card-body">
+                <h5 class="card-title">Manage Book</h5>
+                <table class="table">
+                   <thead>
+                      <tr>
+                         <th scope="col">#</th>
+                         <th scope="col">Image</th>
+                         <th scope="col">Name</th>
+                         <th scope="col">Price</th>
+                         <th scope="col">Amount</th>
+                         <th scope="col"></th>
+                      </tr>
+                   </thead>
+                   <tbody>
+                      <tr *ngFor="let item of this.listBook; let indexOfelement=index;">
+                         <th class="num" scope="row"> {{indexOfelement+1}}</th>
+                         <td class="image-book"><img class="imgBook" [src]="item.imgBook" alt=""> </td>
+                         <td class="name-book">{{item.nameBook}}</td>
+                         <td class="price-book">{{item.priceBook}}</td>
+                         <td class="quantity-book">{{item.quantity}}</td>
+                         <td class="event-book">
+                             <a href=""><i class="bi bi-pencil-square"></i> Update </a>
+                                 <div class="form-check form-switch">
+                                 <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" [checked]="item.stt" >
+                               </div>
+                         </td>
+                      </tr>
+                   </tbody>
+                </table>
+             </div>
+          </div>
+          
+          
+          
+       </div>
+      
+    </div>
+ </section>
